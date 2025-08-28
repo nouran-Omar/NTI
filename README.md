@@ -2,8 +2,6 @@
 
 LUXE is a modern, responsive e-commerce website specializing in luxury fashion products. Built with pure HTML, CSS, and JavaScript, it offers a premium shopping experience with elegant design and smooth animations.
 
-![LUXE Preview](https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=2670&auto=format&fit=crop)
-
 ## ✨ Features
 
 - **🎨 Modern Design**: Elegant dark theme with gold accents
@@ -67,8 +65,7 @@ LUXE is a modern, responsive e-commerce website specializing in luxury fashion p
 ### Products Page
 ![Products Page](https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600&auto=format&fit=crop)
 
-### Shopping Cart
-![Shopping Cart](https://images.unsplash.com/photo-1555529771-7888783a18d3?q=80&w=600&auto=format&fit=crop)
+
 
 ## 🔧 Customization
 
