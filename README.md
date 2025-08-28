@@ -1,6 +1,6 @@
 # 🛍️ LUXE - Luxury E-commerce Platform
 
-LUXE is a modern, responsive e-commerce website specializing in luxury fashion products. Built with pure HTML, CSS, and JavaScript, it offers a premium shopping experience with elegant design and smooth animations.
+ responsive e-commerce website specializing in luxury fashion products. Built with  HTML, CSS, and JavaScript, it offers a premium shopping experience with elegant design and smooth animations.
 
 ## ✨ Features
 
