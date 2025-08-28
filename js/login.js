@@ -27,8 +27,6 @@ function initializeUsers() {
         localStorage.setItem('luxeUsers', JSON.stringify(defaultUsers));
     }
 }
-
-// Form validation and submission
 document.getElementById('loginForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     
@@ -69,14 +67,9 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         });
         return;
     }
-    
-    // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Check user credentials
     const users = JSON.parse(localStorage.getItem('luxeUsers') || '[]');
     const user = users.find(u => u.email === email && u.password === password);
-    
     if (user) {
         const userSession = {
             email: user.email,

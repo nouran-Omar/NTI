@@ -39,11 +39,8 @@
             setTimeout(() => {
                 document.querySelector('.swiper-section').classList.add('loaded');
             }, 2100);
-            
-            // Check admin status
             const userSession = JSON.parse(localStorage.getItem('luxeUser') || '{}');
             const addProductBtn = document.getElementById('addProductBtn');
-
             if (userSession.loggedIn && userSession.isAdmin) {
                 addProductBtn.classList.remove('d-none');
             }
@@ -128,8 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 notification.remove();
             }, 3000);
         }
-        
-        // Create floating particles
         function createParticles() {
             const particlesContainer = document.querySelector('.hero-particles');
             for (let i = 0; i < 20; i++) {
@@ -143,15 +138,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 particlesContainer.appendChild(particle);
             }
         }
-        
-        // Smooth scroll to products
         function scrollToProducts() {
             document.getElementById('products').scrollIntoView({
                 behavior: 'smooth'
             });
         }
-        
-        // Intersection Observer for fade-in animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -164,8 +155,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }, observerOptions);
-        
-        // Animate numbers
         function animateNumbers() {
             const numbers = document.querySelectorAll('.stat-number');
             numbers.forEach(number => {

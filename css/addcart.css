@@ -136,8 +136,6 @@
         .image-preview.has-image img {
             display: block;
         }
-
-        /* Products Slider */
         .products-slider {
             margin-top: 3rem;
             padding: 2rem 0;
@@ -152,7 +150,6 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        /* إضافة تنسيقات Swiper */
 .swiper {
     width: 100%;
     padding: 20px 0;
@@ -237,8 +234,7 @@
             font-size: 0.9rem;
             margin-bottom: 1rem;
             display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
+            line-clamp: 3;
             overflow: hidden;
         }
         .product-category {

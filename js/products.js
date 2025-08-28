@@ -104,21 +104,16 @@ function addAdditionalProducts() {
     return savedProducts;
 }
 function getImagePath(imagePath) {
-    // إذا كان المسار يحتوي على http أو data: (base64) فهو مسار صحيح
     if (imagePath && (imagePath.startsWith('http') || imagePath.startsWith('data:'))) {
         return imagePath;
     }
-    
-    // إذا كان اسم ملف فقط، أضف مجلد images
     if (imagePath && !imagePath.includes('/') && !imagePath.startsWith('http')) {
         return `${imagePath}`;
     }
-    
-    // إذا كان المسار يحتوي على مجلد بالفعل
+
     if (imagePath && imagePath.includes('/') && !imagePath.startsWith('http')) {
         return imagePath;
     }
-    // return 'https://placehold.co/600x400/1a1a1a/d4af37?text=Product';
 }
 
 function loadDynamicProducts() {
@@ -216,8 +211,6 @@ function setupProductFiltering() {
             applyFilter(filter);
         });
     });
-    
-    // تطبيق الفلتر الافتراضي
     applyFilter('all');
 }
 function setupAddToCartButtons() {
@@ -285,8 +278,6 @@ function setupAddToCartButtons() {
         }
     });
 }
-
-// دالة عرض الإشعارات
 function showNotification(message) {
     const notification = document.createElement('div');
     notification.className = 'notification';
@@ -316,11 +307,7 @@ function showNotification(message) {
     }, 2500);
 }
 
-// تهيئة الصفحة عند التحميل
 document.addEventListener('DOMContentLoaded', function() {
-
-    
-    // تهيئة AOS
     if (typeof AOS !== 'undefined') {
         AOS.init({
             duration: 800,

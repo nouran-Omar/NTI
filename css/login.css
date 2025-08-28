@@ -23,12 +23,12 @@ body {
     position: relative;
     padding: 120px 0 80px;
     text-align: center;
-    background: none; /* Removed old background image */
+    background: none; 
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 60vh; /* Added to give more space for the swiper */
+    min-height: 60vh; 
 }
 .hero-title {
     font-family: 'Playfair Display', serif;
@@ -45,35 +45,12 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Swiper.js Styling (ADDED) */
-.swiper-hero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.swiper-slide {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(0.6); /* Darkens the image for better text readability */
-}
-.swiper-slide-1 {
-    background-image: url('https://images.unsplash.com/photo-1579737153406-38419616d418?q=80&w=2670&auto=format&fit=crop');
-}
-.swiper-slide-2 {
-    background-image: url('https://images.unsplash.com/photo-1629747447913-92f7a552140a?q=80&w=2574&auto=format&fit=crop');
-}
-.swiper-slide-3 {
-    background-image: url('https://images.unsplash.com/photo-1589345711651-78921869e96e?q=80&w=2670&auto=format&fit=crop');
-}
+
 .hero-content {
-    position: relative; /* Ensures text is layered on top of the Swiper */
+    position: relative; 
     z-index: 10;
 }
 
-/* Rest of your CSS */
 .login-section {
     padding: 80px 0;
     background: var(--secondary-dark);

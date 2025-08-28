@@ -49,8 +49,6 @@ let swiper = null;
             }
         });
     }
-
-    // تحديث عداد السلة
     function updateCartCount() {
         const cart = JSON.parse(localStorage.getItem('luxeCart')) || [];
         const cartCount = document.querySelector('.cart-count');
@@ -59,8 +57,6 @@ let swiper = null;
             cartCount.textContent = totalItems;
         }
     }
-
-    // معاينة الصورة
     function setupImagePreview() {
         const imagePreview = document.getElementById('imagePreview');
         if (imagePreview) {
@@ -96,8 +92,6 @@ let swiper = null;
             });
         }
     }
-
-    // إعداد نموذج إضافة المنتج
     function setupProductForm() {
         const productForm = document.getElementById('productForm');
         if (productForm) {
@@ -156,8 +150,6 @@ let swiper = null;
                 }
             });
         }
-
-        // إعداد أزرار المسح
         const clearForm = document.getElementById('clearForm');
         if (clearForm) {
             clearForm.addEventListener('click', function() {
@@ -195,8 +187,6 @@ let swiper = null;
             });
         }
     }
-
-    // إكمال إضافة المنتج
     function completeProductAddition(name, price, category, rating, description, imageData) {
         const newProduct = {
             id: Date.now().toString(),
@@ -257,13 +247,12 @@ function renderProducts() {
         return;
     }
     
-    // إذا كانت Swiper معينة بالفعل، ندمرها أولاً
     if (swiper) {
         swiper.destroy(true, true);
         swiper = null;
     }
     
-    // إنشاء الشرائح يدوياً
+
     products.forEach(product => {
         const slide = document.createElement('div');
         slide.className = 'swiper-slide';
@@ -315,8 +304,6 @@ function renderProducts() {
             },
         }
     });
-    
-    // إضافة معالجات الأحداث للزرين Edit و Delete
     swiperWrapper.addEventListener('click', function(e) {
         const editBtn = e.target.closest('.edit-product');
         const deleteBtn = e.target.closest('.delete-product');
@@ -330,8 +317,6 @@ function renderProducts() {
         }
     });
 }
-
-    // توليد تقييم النجوم
     function generateStarRating(rating) {
         let stars = '';
         const fullStars = Math.floor(rating);
@@ -432,7 +417,6 @@ function renderProducts() {
         });
     }
 
-    // حذف المنتج
     function deleteProduct(id) {
         if (!isAdmin) {
             Swal.fire({

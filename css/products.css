@@ -39,8 +39,6 @@
             padding-top: 120px;
             min-height: 100vh;
         }
-
-        /* Products Hero Section */
         .products-hero {
             height: 60vh;
             background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%), 
@@ -202,7 +200,6 @@
             box-shadow: 0 10px 25px rgba(245, 87, 108, 0.3);
         }
 
-        /* Products Grid */
         .products-grid {
             padding: 80px 0;
             background: var(--secondary-dark);
@@ -218,8 +215,6 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
-        /* Product Cards - Matching Home Page Style */
         .product-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -304,8 +299,6 @@
             margin: 0 2px;
             font-size: 1.1rem;
         }
-
-        /* Buttons */
         .btn-luxury {
             background: var(--gradient-gold);
             color: white;
@@ -368,7 +361,6 @@
             transform: scale(1.1);
         }
 
-        /* Product Badge */
         .product-badge {
             position: absolute;
             top: 15px;
@@ -383,7 +375,6 @@
             z-index: 3;
         }
 
-        /* Quick View Button */
         .quick-view-btn {
             position: absolute;
             bottom: 20px;
@@ -406,7 +397,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* Add Product Button */
         .add-product-btn {
             position: fixed;
             bottom: 30px;
@@ -436,7 +426,6 @@
         .add-product-btn i {
             font-size: 1.2rem;
         }
-        /* Notification */
         .notification {
             position: fixed;
             top: 100px;

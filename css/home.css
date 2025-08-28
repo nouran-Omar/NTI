@@ -340,8 +340,6 @@
             color: var(--accent-gold);
             margin-bottom: 1rem;
         }
-
-        /* Testimonials */
         .testimonials {
             background: var(--gradient-dark);
             padding: 100px 0;
@@ -388,8 +386,6 @@
             font-weight: 600;
             color: var(--accent-gold);
         }
-
-        /* Stats Section */
         .stats-section {
             background: var(--primary-dark);
             padding: 80px 0;
@@ -470,7 +466,6 @@
             }
         }
 
-        /* Additional Luxury Effects */
         .glow-effect {
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
         }
@@ -478,8 +473,6 @@
         .text-glow {
             text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
         }
-
-        /* User info in navbar */
         .user-info {
             display: flex;
             align-items: center;
@@ -634,8 +627,6 @@
             background: var(--accent-gold);
             opacity: 1;
         }
-
-        /* Responsive adjustments for swiper */
         @media (max-width: 768px) {
             .swiper {
                 height: 350px;
