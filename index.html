@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+    <div class="sleeper-overlay">
+        <div class="luxe-logo">LUXE</div>
+    </div>
+
+    <main>
+        <a href="addcard.html" id="addProductBtn" class="add-product-btn d-none">
+            <i class="fas fa-plus-circle"></i> Add Product
+        </a>
+        <section class="hero-section" id="home">
+            <div class="hero-particles">
+
+
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title text-glow">LUXURY REDEFINED</h1>
+                <p class="hero-subtitle">Discover the art of premium fashion and timeless elegance</p>
+                <button class="btn btn-luxury" onclick="scrollToProducts()">
+                    EXPLORE COLLECTION
+                    <i class="fas fa-arrow-right ms-2"></i>
+                </button>
+            </div>
+        </section>
+        <section class="stats-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Premium Products</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <div class="stat-number">25</div>
+                            <div class="stat-label">Countries</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <div class="stat-number">5★</div>
+                            <div class="stat-label">Rating</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="featured-products" id="products">
+            <div class="container">
+                <h2 class="section-title">FEATURED COLLECTION</h2>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="product-card glow-effect">
+                            <img src="https://images.unsplash.com/photo-1608667508764-33cf0726b13a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNob2VzfGVufDB8fDB8fHww" alt="Premium Shoes" class="product-image">
+                            <div class="product-info">
+                                <h5 class="product-title">Premium Shoes</h5>
+                                <p class="product-price">$299.00</p>
+                              <button class="btn btn-luxury add-to-cart-btn" data-product-id="premium-shoes">
+    ADD TO CART
+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="product-card glow-effect">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2F0Y2h8ZW58MHx8MHx8fDA%3D" alt="Luxury Watch" class="product-image">
+                            <div class="product-info">
+                                <h5 class="product-title">Luxury Timepiece</h5>
+                                <p class="product-price">$899.00</p>
+                              <button class="btn btn-luxury add-to-cart-btn" data-product-id="luxury-watch">
+    ADD TO CART
+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="product-card glow-effect">
+                            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFnfGVufDB8fDB8fHww" alt="Designer Handbag" class="product-image">
+                            <div class="product-info">
+                                <h5 class="product-title">Designer Handbag</h5>
+                                <p class="product-price">$459.00</p>
+                               <button class="btn btn-luxury add-to-cart-btn" data-product-id="designer-bag">
+    ADD TO CART
+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">WHAT OUR CLIENTS SAY</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"The epitome of luxury and style. Every piece tells a story of craftsmanship and elegance."</p>
+                            <div class="testimonial-author">— Sarah Johnson</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Unmatched quality and service. LUXE has redefined my understanding of premium fashion."</p>
+                            <div class="testimonial-author">— Michael Chen</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Each purchase is an investment in timeless beauty. Absolutely extraordinary experience."</p>
+                            <div class="testimonial-author">— Emma Rodriguez</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section class="swiper-section">
+  <div class="container">
+    <h2 class="section-title">TRENDING COLLECTIONS</h2>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        
+        <!-- 1: Men's Style -->
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=600&auto=format&fit=crop&q=60" alt="Men's Style">
+          <div class="swiper-slide-content">
+            <h3 class="swiper-slide-title">Men's Style</h3>
+            <p class="swiper-slide-description">Discover the latest looks to upgrade your everyday style</p>
+            <button class="btn btn-luxury">SHOP NOW</button>
+          </div>
+        </div>
+
+        <!-- 2: Men's Clothing -->
+        <div class="swiper-slide">
+          <img src="https://images.pexels.com/photos/1884579/pexels-photo-1884579.jpeg" alt="Men's Clothing">
+          <div class="swiper-slide-content">
+            <h3 class="swiper-slide-title">Men's Clothing</h3>
+            <p class="swiper-slide-description">Premium men's wear designed for comfort and elegance</p>
+            <button class="btn btn-luxury">SHOP NOW</button>
+          </div>
+        </div>
+
+        <!-- 3: Women's Fashion -->
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1525299374597-911581e1bdef?w=600&auto=format&fit=crop&q=60" alt="Women's Fashion">
+          <div class="swiper-slide-content">
+            <h3 class="swiper-slide-title">Women's Fashion</h3>
+            <p class="swiper-slide-description">Chic and modern outfits for every occasion</p>
+            <button class="btn btn-luxury">SHOP NOW</button>
+          </div>
+        </div>
+
+        <!-- 4: Luxury Bags -->
+        <div class="swiper-slide">
+          <img src="https://images.unsplash.com/photo-1611010344444-5f9e4d86a6e1?w=600&auto=format&fit=crop&q=60" alt="Luxury Bag">
+          <div class="swiper-slide-content">
+            <h3 class="swiper-slide-title">Luxury Bags</h3>
+            <p class="swiper-slide-description">Carry elegance everywhere with our stylish bags</p>
+            <button class="btn btn-luxury">SHOP NOW</button>
+          </div>
+        </div>
+
+        <!-- 5: Women's Jackets -->
+        <div class="swiper-slide">
+          <img src="https://i.etsystatic.com/22023816/r/il/722df7/7034145881/il_600x600.7034145881_a3d4.jpg" alt="Women's Jacket">
+          <div class="swiper-slide-content">
+            <h3 class="swiper-slide-title">Women's Jackets</h3>
+            <p class="swiper-slide-description">Stay warm and chic with our exclusive jacket designs</p>
+            <button class="btn btn-luxury">SHOP NOW</button>
+          </div>
+        </div>
+
+        <!-- 6: Footwear -->
+        <div class="swiper-slide">
+          <img src="https://images.pexels.com/photos/179909/pexels-photo-179909.jpeg" alt="Footwear">
+          <div class="swiper-slide-content">
+            <h3 class="swiper-slide-title">Footwear</h3>
+            <p class="swiper-slide-description">Step into comfort and style with our latest sneakers</p>
+            <button class="btn btn-luxury">SHOP NOW</button>
+          </div>
+        </div>
+
+        <!-- 7: Jewelry - Ring -->
+        <div class="swiper-slide">
+          <img src="https://i.etsystatic.com/16718720/r/il/60067f/3680551878/il_600x600.3680551878_fcc0.jpg" alt="Jewelry Ring">
+          <div class="swiper-slide-content">
+            <h3 class="swiper-slide-title">Luxury Jewelry</h3>
+            <p class="swiper-slide-description">Add a touch of elegance with our timeless rings</p>
+            <button class="btn btn-luxury">SHOP NOW</button>
+          </div>
+        </div>
+
+        <!-- 8: Handbags -->
+        <div class="swiper-slide">
+          <img src="https://i.etsystatic.com/21490334/c/2362/2362/635/69/il/24ddde/5652228863/il_600x600.5652228863_8puh.jpg" alt="Handbags">
+          <div class="swiper-slide-content">
+            <h3 class="swiper-slide-title">Designer Handbags</h3>
+            <p class="swiper-slide-description">Luxury handbags crafted for every occasion</p>
+            <button class="btn btn-luxury">SHOP NOW</button>
+          </div>
+        </div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    </div>
+</section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/common.js"></script>
+</body>
+</html>

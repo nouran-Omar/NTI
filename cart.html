@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE - My Cart</title>
+
+    <!-- External Libraries (CDNs) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    
+</head>
+<body>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="hero-title">My Cart</h1>
+            </div>
+        </section>
+        <section class="shopping-cart-container">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-8" data-aos="fade-right">
+                        <h2 class="mb-4 text-light">Shopping Cart (<span id="cart-item-count">0</span> item)</h2>
+                        <div id="cart-items" class="cart-items-section">
+                 </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-left">
+                        <div id="cart-total-container" class="cart-summary-section">
+                            <h5 class="fw-bold mb-3 text-gold">Cart Summary</h5>
+                            <ul class="list-unstyled">
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Subtotal:</span>
+                                    <span id="subtotal" class="fw-bold">$0.00</span>
+                                </li>
+                                <li class="d-flex justify-content-between mb-2">
+                                    <span>Tax:</span>
+                                    <span id="tax" class="fw-bold">$0.00</span>
+                                </li>
+                                <li class="d-flex justify-content-between">
+                                    <span>Shipping:</span>
+                                    <span id="shipping" class="fw-bold">$0.00</span>
+                                </li>
+                            </ul>
+                            <hr class="text-white-50">
+                            <div class="d-flex justify-content-between fw-bold fs-5">
+                                <span>Total:</span>
+                                <span id="total-price">$0.00</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-4 checkout-btn">Proceed to Checkout</button>
+                            <button id="clear-cart-btn" class="btn btn-secondary w-100 mt-2 clear-cart-btn">Clear Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast" class="toast-notification">
+        <i class="fas fa-check-circle me-2"></i>
+        <span id="toast-message">Cart updated successfully!</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/common.js"></script>
+     <!-- <script src="script.js"></script> -->
+</body>
+</html>

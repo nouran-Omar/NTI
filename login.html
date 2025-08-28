@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="hero-title">Welcome Back</h1>
+                <p class="hero-subtitle">Sign in to access your exclusive LUXE account</p>
+            </div>
+        </section>
+
+        <section class="login-section">
+            <div class="container">
+                <div class="login-container">
+                    <h2 class="login-title">Sign In</h2>
+                    
+                    <form id="loginForm">
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                <span class="input-group-text toggle-password" style="cursor: pointer;">
+                                    <i class="fas fa-eye"></i>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                            <a href="#" class="float-end" id="forgotPassword">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-luxury" id="loginBtn">
+                            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                            Sign In
+                        </button>
+                    </form>
+                    
+                    <div class="divider">
+                        <span>Or continue with</span>
+                    </div>
+                    
+                    <div class="social-login">
+                        <a href="#" class="social-btn">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-btn">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-btn">
+                            <i class="fab fa-apple"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="login-links">
+                        <p>Don't have an account? <a href="register.html" id="registerLink">Create Account</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/common.js"></script>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

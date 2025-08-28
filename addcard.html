@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE - Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/addcart.css">
+</head>
+<body>
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="hero-title">Admin Panel</h1>
+                <p class="hero-subtitle">Manage your products and inventory</p>
+            </div>
+        </section>
+        <section class="admin-section">
+            <div class="container">
+                <div class="storage-warning" id="storageWarning">
+                    <i class="fas fa-exclamation-triangle"></i> 
+                    <span id="storageWarningText"></span>
+                </div>
+                
+                <div class="admin-container">
+                    <h2 class="admin-title">Add New Product</h2>
+                    
+                    <form id="productForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label for="productName" class="form-label">Product Name</label>
+                                <input type="text" class="form-control" id="productName" required>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="productPrice" class="form-label">Price ($)</label>
+                                <input type="number" class="form-control" id="productPrice" min="0" step="0.01" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label for="productCategory" class="form-label">Category</label>
+                                <select class="form-select" id="productCategory" required>
+                                    <option value="">Select Category</option>
+                                    <option value="clothing">Clothing</option>
+                                    <option value="accessories">Accessories</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="luxury">Luxury Items</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="productRating" class="form-label">Rating (1-5)</label>
+                                <input type="number" class="form-control" id="productRating" min="1" max="5" step="0.1" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="productDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="productDescription" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label">Product Image</label>
+                            <div class="image-preview" id="imagePreview">
+                                <div class="placeholder">
+                                    <i class="fas fa-cloud-upload-alt fa-3x mb-2"></i>
+                                    <p>Click to upload image</p>
+                                </div>
+                                <img id="previewImage" src="" alt="Preview">
+                            </div>
+                            <input type="file" class="form-control" id="productImage" accept="image/*" style="display: none;">
+                            <div class="form-text">For best performance, use image URLs instead of uploading large images.</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="imageUrl" class="form-label">Or enter image URL</label>
+                            <input type="url" class="form-control" id="imageUrl" placeholder="https://example.com/image.jpg">
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-luxury me-2">Add Product</button>
+                            <button type="button" class="btn btn-danger" id="clearForm">Clear Form</button>
+                            <button type="button" class="btn btn-warning" id="clearStorage">Clear All Data</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Products Slider -->
+                <div class="products-slider">
+                    <h3 class="slider-title">Current Products</h3>
+                    <!-- استبدال بنية المتزلقة بـ Swiper -->
+                    <div class="swiper" id="productsSwiper">
+                        <div class="swiper-wrapper">
+                            <!-- سيتم ملء هذا القسم بالمنتجات عبر JavaScript -->
+                        </div>
+                        <!-- إضافة أسهم التنقل -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <!-- إضافة الترقيم -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/addcart.js"></script>
+</body>
+</html>

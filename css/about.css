@@ -1,0 +1,65 @@
+   .about-header {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../image/2.png');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            text-align: center;
+        }
+        .about-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 4rem;
+            color: var(--accent-gold);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+           .about-content {
+            padding: 80px 0;
+            color:#bdb8a7 !important ;
+            
+        }
+        .about-content p {
+            /* padding: 80px 0; */
+            color:#bdb8a7 !important ;
+            
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-bottom: 40px;
+        }
+        
+        .vision-card {
+            background: var(--secondary-dark);
+            border-radius: 10px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .vision-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        .vision-card .icon {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .tech-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }

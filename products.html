@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE - Premium Collection</title>
+
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/products.css">
+</head>
+<body>
+   
+    <main>
+
+        <a href="addcard.html" id="addProductBtn" class="add-product-btn">
+            <i class="fas fa-plus-circle"></i> Add Product
+        </a>
+        <section class="products-hero" data-aos="fade-in" data-aos-duration="1000">
+            <div class="products-hero-content">
+                <h1 class="hero-title">PREMIUM COLLECTION</h1>
+                <p class="hero-subtitle">Discover our carefully curated selection of luxury items</p>
+            </div>
+        </section>
+      
+        
+        <!-- Swiper Images Section -->
+        <section class="swiper-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">TRENDING NOW</h2>
+                
+                <!-- Swiper Container -->
+                <div class="swiper-container" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=2670" alt="Luxury Fashion">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2670" alt="Fashion Sale">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?q=80&w=2670" alt="Luxury Accessories">
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <img src="https://i.etsystatic.com/61327530/c/880/880/0/223/il/29eb8c/7169544167/il_600x600.7169544167_3zu6.jpg" alt="Elegant Style">
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2670" alt="Boutique Collection">
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=2670" alt="Luxury Watch">
+                        </div>
+                        <!-- Slide 7 -->
+                        <div class="swiper-slide">
+                            <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?q=80&w=2670" alt="Designer Bag">
+                        </div>
+                        <!-- Slide 8 -->
+                        <div class="swiper-slide">
+                            <img src="https://i.etsystatic.com/48081294/r/il/a8a3e7/6744551974/il_850x675.6744551974_see5.jpg" alt="Jewelry Collection">
+                        </div>
+                    </div>
+                    
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    
+                    <!-- Navigation Buttons -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+          <section class="filter-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <button class="filter-btn active" data-filter="all">All Products</button>
+                        <button class="filter-btn" data-filter="clothing">Clothing</button>
+                        <button class="filter-btn" data-filter="accessories">Accessories</button>
+                        <button class="filter-btn" data-filter="electronics">Electronics</button>
+                        <button class="filter-btn" data-filter="luxury">Luxury Items</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products-grid" id="products">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">FEATURED COLLECTION</h2>
+                <div class="row g-4" id="products-container">
+                    <!-- سيتم إضافة المنتجات ديناميكيًا هنا -->
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+                document.addEventListener('DOMContentLoaded', function() {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true,
+                    mirror: false
+                });
+            }
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                speed: 1000,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                    },
+                },
+            });
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/products.js"></script>
+        
+</body>
+</html>

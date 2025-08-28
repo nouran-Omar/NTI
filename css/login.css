@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+:root {
+    --primary-dark: #0a0a0a;
+    --secondary-dark: #1a1a1a;
+    --accent-gold: #d4af37;
+    --accent-light: #f8f6f0;
+    --text-light: #ffffff;
+    --text-muted: #b0b0b0;
+    --gradient-gold: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-dark: linear-gradient(135deg, #0c0c0c 0%, #2d2d2d 100%);
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--gradient-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.page-hero {
+    position: relative;
+    padding: 120px 0 80px;
+    text-align: center;
+    background: none; /* Removed old background image */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh; /* Added to give more space for the swiper */
+}
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 0%, var(--accent-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Swiper.js Styling (ADDED) */
+.swiper-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.6); /* Darkens the image for better text readability */
+}
+.swiper-slide-1 {
+    background-image: url('https://images.unsplash.com/photo-1579737153406-38419616d418?q=80&w=2670&auto=format&fit=crop');
+}
+.swiper-slide-2 {
+    background-image: url('https://images.unsplash.com/photo-1629747447913-92f7a552140a?q=80&w=2574&auto=format&fit=crop');
+}
+.swiper-slide-3 {
+    background-image: url('https://images.unsplash.com/photo-1589345711651-78921869e96e?q=80&w=2670&auto=format&fit=crop');
+}
+.hero-content {
+    position: relative; /* Ensures text is layered on top of the Swiper */
+    z-index: 10;
+}
+
+/* Rest of your CSS */
+.login-section {
+    padding: 80px 0;
+    background: var(--secondary-dark);
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.login-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    filter: blur(.5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+.login-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.form-control {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--text-light) !important;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: var(--accent-gold) !important;
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25) !important;
+}
+.form-label {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+.input-group-text {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--text-muted) !important;
+}
+.btn-luxury {
+    background: var(--gradient-gold);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(245, 87, 108, 0.3);
+    width: 100%;
+    margin-top: 1rem;
+}
+.btn-luxury:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(245, 87, 108, 0.5);
+}
+.form-check-input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.form-check-input:checked {
+    background-color: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+.form-check-label {
+    color: var(--text-muted);
+}
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.divider span {
+    padding: 0 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    transition: all 0.3s ease;
+}
+.social-btn:hover {
+    background: var(--accent-gold);
+    color: var(--primary-dark);
+    transform: translateY(-3px);
+}
+.login-links {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.login-links a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.login-links a:hover {
+    text-decoration: underline;
+}
+.spinner-border {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
