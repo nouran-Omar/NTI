@@ -1,10 +1,10 @@
 # 🛍️ LUXE - Luxury E-commerce Platform
 
- responsive e-commerce website specializing in luxury fashion products. Built with  HTML, CSS, and JavaScript, it offers a premium shopping experience with elegant design and smooth animations.
+A responsive e-commerce website specializing in luxury fashion products. Built with HTML, CSS, and JavaScript, it offers a premium shopping experience with elegant design and smooth animations.
 
 ## ✨ Features
 
-- **🎨 Modern Design**: Elegant dark theme with gold accents
+- **🎨 Design**: Elegant dark theme with gold accents
 - **📱 Fully Responsive**: Works seamlessly on all devices
 - **🛒 Shopping Cart**: Persistent cart using localStorage
 - **🔐 User Authentication**: Login/register system
@@ -51,6 +51,7 @@
 - Edit existing products
 - Delete products
 - Image upload or URL support
+- **Test products:** You can also add wrong/test products on purpose to try the system. Later, you can edit or delete them from the Admin Dashboard.
 
 ### Responsive Design
 - Mobile-first approach
@@ -65,12 +66,17 @@
 ### Products Page
 ![Products Page](https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600&auto=format&fit=crop)
 
-
-
-## 🔧 Customization
+## 🔧 Customization & Product Management
 
 ### Adding New Products
 1. Login as admin (`admin@luxe.com / admin123`)
-2. Navigate to "Add Product" page
-3. Fill in product details and upload an image
-4. Save to add to the product catalog
+2. Navigate to the **Add Product** page
+3. Fill in product details and upload an image (or add an image URL)
+4. Save to add the product to the catalog
+
+### Editing or Deleting Products
+- If you added a product **incorrectly** (wrong details or test products you added just to try the system), you can manage it from the **Admin Dashboard**:
+  - ✏️ **Edit:** Update product details (name, price, image, etc.)
+  - 🗑️ **Delete:** Remove unwanted products
+- This works for both **newly added** and **existing** products.
+
